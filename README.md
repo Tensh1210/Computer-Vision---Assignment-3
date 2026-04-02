@@ -25,6 +25,20 @@
 
 ---
 
+## 🗂️ Cấu trúc repo
+
+```
+.
+├── BTL3_ComputerVision.ipynb   # Notebook chính — toàn bộ pipeline
+├── 20240409_095557.jpg         # hinh1
+├── 20240409_095602.jpg         # hinh2
+├── 20240409_095607.jpg         # hinh3
+├── 20240409_095613.jpg         # hinh4
+└── README.md
+```
+
+---
+
 ## 🛠️ Công nghệ
 - Python 3.8+
 - OpenCV 4.x
@@ -42,14 +56,14 @@ pip install opencv-python numpy matplotlib jupyter
 jupyter notebook BTL3_ComputerVision.ipynb
 ```
 
-> Hoặc upload notebook và 4 file ảnh `.jpg` lên **Google Colab** rồi chọn **Runtime → Run all**.
+> Hoặc upload toàn bộ file trong repo lên **Google Colab** rồi chọn **Runtime → Run all**.
 
 ---
 
 ## 📊 Kết quả chính
 
 **SIFT:**  
-Descriptor float 128 chiều, FLANN KD-tree, Lowe's ratio test (τ = 0.7) — cho kết quả bao phủ góc nhìn rộng hơn, thời gian 0.52s nhờ FLANN tối ưu tốt cho descriptor float
+Descriptor float 128 chiều, FLANN KD-tree, Lowe's ratio test (τ = 0.7) — bao phủ góc nhìn rộng hơn, thời gian 0.52s nhờ FLANN tối ưu tốt cho descriptor float
 
 **ORB:**  
 Descriptor nhị phân 256-bit, BFMatcher Hamming + crossCheck, top-100 — tỉ lệ inlier cao hơn (82–97%), thời gian 1.83s do BFMatcher duyệt hai chiều với 3000 keypoint
